@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19H1519" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Ocena" representedClassName=".Ocena" syncable="YES">
-        <attribute name="id_ocena" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="kategoria" optional="YES" attributeType="String"/>
         <attribute name="waga" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="wartosc" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="przedmiot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Przedmiot" inverseName="oceny" inverseEntity="Przedmiot"/>
     </entity>
     <entity name="Przedmiot" representedClassName=".Przedmiot" syncable="YES">
-        <attribute name="id_przedmiot" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nazwa" optional="YES" attributeType="String"/>
-        <relationship name="oceny" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ocena" inverseName="przedmiot" inverseEntity="Ocena"/>
+        <relationship name="ocena" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ocena"/>
     </entity>
     <elements>
-        <element name="Przedmiot" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Ocena" positionX="215.28125" positionY="-1.86328125" width="128" height="118"/>
+        <element name="Ocena" positionX="215.28125" positionY="-1.86328125" width="128" height="88"/>
+        <element name="Przedmiot" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>

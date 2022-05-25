@@ -13,19 +13,16 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var dbContext
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Przedmiot.id_przedmiot, ascending: true)], animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Przedmiot.nazwa, ascending: true)], animation: .default)
     private var przedmioty: FetchedResults<Przedmiot>
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Ocena.id_ocena, ascending: true)], animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Ocena.kategoria, ascending: true)], animation: .default)
     private var oceny: FetchedResults<Ocena>
     
     @State private var nazwa: String = ""
     @State private var kategoria: String = ""
     @State private var waga: Double = 0.0
     @State private var wartosc: Double = 0.0
-    @State private var ocenayTab: [Ocena]?
-    
-    @State private var pickerId: Int = 0
     
     var body: some View {
         
@@ -43,24 +40,20 @@ struct ContentView: View {
 //                .accentColor(Color(.blue))
 //                Spacer()
 //            }
-
+            
             VStack {
                 Text("Dzienniczek ucznia")
                 
                 List {
-                    ForEach(przedmioty, id: \.self) { przedmiot in
-                        Text("\(przedmiot.nazwa!)")
-                        ForEach(przedmiot, id: \.self) { ocena in
-                            VStack(alignment: .leading) {
-                                Text("Test")
-    //                                Text("Title: \(book.title!)")
-    //                                Text("Author: \(book.author!)")
-    //                                Text("Publish year: \(String(book.publishYear))")
-    //                                Text("Publisher: \(book.publisher!)")
-    //                                Text("Stars: \(book.stars)")
+                    ForEach(przedmioty) { (przedmiot: Przedmiot) in
+                            Text(przedmiot.nazwa!)
+                            ForEach(Array((przedmiot.ocena as? Set<Ocena>)!)) { ocenaItem in
+                                VStack(alignment: .leading) {
+                                    Text("Ocena: \(ocenaItem.wartosc)")
+                                    Text("Ocena: \(ocenaItem.wartosc)")
+                                    Text("Ocena: \(ocenaItem.wartosc)")
+                                }
                             }
-                        }
-                        
                     }.onDelete(perform: deletePrzedmiot)
                 }
                 Button(action: addPrzedmiot) {
@@ -72,7 +65,7 @@ struct ContentView: View {
     
     private func addPrzedmiot() {
         let przedmiot = Przedmiot(context: dbContext)
-        przedmiot.nazwa = "XDDD"
+        przedmiot.nazwa = nazwa
         
         do {
             try dbContext.save()

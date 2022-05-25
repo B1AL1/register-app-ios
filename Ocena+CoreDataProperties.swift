@@ -2,7 +2,7 @@
 //  Ocena+CoreDataProperties.swift
 //  Projekt
 //
-//  Created by student on 25/05/2022.
+//  Created by Konrad on 25/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 //
@@ -17,10 +17,12 @@ extension Ocena {
         return NSFetchRequest<Ocena>(entityName: "Ocena")
     }
 
-    @NSManaged public var id_ocena: UUID?
-    @NSManaged public var wartosc: Double
-    @NSManaged public var waga: Double
     @NSManaged public var kategoria: String?
-    @NSManaged public var przedmiot: Przedmiot?
+    @NSManaged public var waga: Double
+    @NSManaged public var wartosc: Double
+
+}
+
+extension Ocena : Identifiable {
 
 }

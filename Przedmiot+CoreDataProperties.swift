@@ -2,7 +2,7 @@
 //  Przedmiot+CoreDataProperties.swift
 //  Projekt
 //
-//  Created by student on 25/05/2022.
+//  Created by Konrad on 25/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 //
@@ -17,25 +17,28 @@ extension Przedmiot {
         return NSFetchRequest<Przedmiot>(entityName: "Przedmiot")
     }
 
-    @NSManaged public var id_przedmiot: UUID?
     @NSManaged public var nazwa: String?
-    @NSManaged public var oceny: NSSet?
+    @NSManaged public var ocena: NSSet?
 
 }
 
-// MARK: Generated accessors for oceny
+// MARK: Generated accessors for ocena
 extension Przedmiot {
 
-    @objc(addOcenyObject:)
-    @NSManaged public func addToOceny(_ value: Ocena)
+    @objc(addOcenaObject:)
+    @NSManaged public func addToOcena(_ value: Ocena)
 
-    @objc(removeOcenyObject:)
-    @NSManaged public func removeFromOceny(_ value: Ocena)
+    @objc(removeOcenaObject:)
+    @NSManaged public func removeFromOcena(_ value: Ocena)
 
-    @objc(addOceny:)
-    @NSManaged public func addToOceny(_ values: NSSet)
+    @objc(addOcena:)
+    @NSManaged public func addToOcena(_ values: NSSet)
 
-    @objc(removeOceny:)
-    @NSManaged public func removeFromOceny(_ values: NSSet)
+    @objc(removeOcena:)
+    @NSManaged public func removeFromOcena(_ values: NSSet)
+
+}
+
+extension Przedmiot : Identifiable {
 
 }
