@@ -24,6 +24,8 @@ struct ContentView: View {
     @State private var waga: Double = 0.0
     @State private var wartosc: Double = 0.0
     
+    @State private var showingAlert = false
+    
     var body: some View {
         
         NavigationView{
@@ -45,21 +47,44 @@ struct ContentView: View {
                 Text("Dzienniczek ucznia")
                 
                 List {
-                    ForEach(przedmioty) { (przedmiot: Przedmiot) in
+                    ForEach(przedmioty) { przedmiot in
+                        HStack {
                             Text(przedmiot.nazwa!)
-                            ForEach(Array((przedmiot.ocena as? Set<Ocena>)!)) { ocenaItem in
-                                VStack(alignment: .leading) {
-                                    Text("Ocena: \(ocenaItem.wartosc)")
-                                    Text("Ocena: \(ocenaItem.wartosc)")
-                                    Text("Ocena: \(ocenaItem.wartosc)")
+                            Section {
+                                ForEach(Array((przedmiot.ocena as? Set<Ocena>)!)) { ocenaItem in
+                                    VStack(alignment: .leading) {
+                                        Text("Ocena: \(ocenaItem.wartosc)")
+                                        Text("Waga: \(ocenaItem.waga)")
+                                        Text("Kategoria: \(ocenaItem.kategoria!)")
+                                    }
                                 }
                             }
+                        }
                     }.onDelete(perform: deletePrzedmiot)
                 }
-                Button(action: addPrzedmiot) {
-                    Text("Add Przedmiot")
+                TextField("Podaj nazwe przedmiotu:", text: $nazwa).padding().multilineTextAlignment(.center)
+                Button("Dodaj Przedmiot") {
+                    czyPrzedmiotDodany()
+                }
+                .alert(isPresented: $showingAlert)
+                {
+                    Alert(title: Text("Blad"), message: Text("Przedmot juz istnieje"), dismissButton: .default(Text("OK")))
                 }
             }
+        }
+    }
+    
+    private func czyPrzedmiotDodany() {
+        przedmioty.forEach { przedmiot in
+            if(przedmiot.nazwa == nazwa)
+            {
+                showingAlert = true
+                return
+            }
+        }
+        if(!showingAlert)
+        {
+            addPrzedmiot()
         }
     }
     
