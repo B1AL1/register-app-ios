@@ -9,7 +9,7 @@
 import SwiftUI
 import CoreData
 
-struct DefaultView: View {
+struct HomeView: View {
     
     @Environment(\.managedObjectContext) private var dbContext
     
@@ -85,8 +85,8 @@ struct DefaultView: View {
     }
 }
 
-struct DefaultView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultView()
+        HomeView()
     }
 }
