@@ -2,7 +2,7 @@
 //  Przedmiot+CoreDataProperties.swift
 //  Projekt
 //
-//  Created by Konrad on 25/05/2022.
+//  Created by Konrad on 27/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 //
@@ -17,6 +17,7 @@ extension Przedmiot {
         return NSFetchRequest<Przedmiot>(entityName: "Przedmiot")
     }
 
+    @NSManaged public var id_przedmiot: String?
     @NSManaged public var nazwa: String?
     @NSManaged public var ocena: NSSet?
 

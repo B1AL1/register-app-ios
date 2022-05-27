@@ -15,12 +15,14 @@
 		3F75DD1E2834EF0F005F1D19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F75DD1D2834EF0F005F1D19 /* Preview Assets.xcassets */; };
 		3F75DD212834EF0F005F1D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75DD1F2834EF0F005F1D19 /* LaunchScreen.storyboard */; };
 		3F75DD2A2834F1F9005F1D19 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F75DD292834F1F9005F1D19 /* CoreData.framework */; };
-		3F75DD302834F2B3005F1D19 /* DziennikView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD2F2834F2B3005F1D19 /* DziennikView.swift */; };
-		3F75DD322834F620005F1D19 /* NowyDziennikView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD312834F620005F1D19 /* NowyDziennikView.swift */; };
 		3FB124F3283E247C00A1783A /* Ocena+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124EF283E247C00A1783A /* Ocena+CoreDataClass.swift */; };
 		3FB124F4283E247C00A1783A /* Ocena+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F0283E247C00A1783A /* Ocena+CoreDataProperties.swift */; };
 		3FB124F5283E247C00A1783A /* Przedmiot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F1283E247C00A1783A /* Przedmiot+CoreDataClass.swift */; };
 		3FB124F6283E247C00A1783A /* Przedmiot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F2283E247C00A1783A /* Przedmiot+CoreDataProperties.swift */; };
+		71A8F9EC284142BB00B99003 /* ManagePrzedmiotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8F9EB284142BB00B99003 /* ManagePrzedmiotView.swift */; };
+		71AAEBEF2841868900D5FE61 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AAEBEE2841868900D5FE61 /* DefaultView.swift */; };
+		71B46F4828415455004EF823 /* AddPrzedmiotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B46F4728415455004EF823 /* AddPrzedmiotView.swift */; };
+		71B46F4C28415999004EF823 /* AddOcenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B46F4B28415999004EF823 /* AddOcenaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +36,14 @@
 		3F75DD202834EF0F005F1D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F75DD222834EF10005F1D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F75DD292834F1F9005F1D19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3F75DD2F2834F2B3005F1D19 /* DziennikView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DziennikView.swift; sourceTree = "<group>"; };
-		3F75DD312834F620005F1D19 /* NowyDziennikView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowyDziennikView.swift; sourceTree = "<group>"; };
 		3FB124EF283E247C00A1783A /* Ocena+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3FB124F0283E247C00A1783A /* Ocena+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FB124F1283E247C00A1783A /* Przedmiot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3FB124F2283E247C00A1783A /* Przedmiot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		71A8F9EB284142BB00B99003 /* ManagePrzedmiotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePrzedmiotView.swift; sourceTree = "<group>"; };
+		71AAEBEE2841868900D5FE61 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		71B46F4728415455004EF823 /* AddPrzedmiotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrzedmiotView.swift; sourceTree = "<group>"; };
+		71B46F4B28415999004EF823 /* AddOcenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOcenaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 		3F75DD102834EF0A005F1D19 /* Projekt */ = {
 			isa = PBXGroup;
 			children = (
-				3F75DD2F2834F2B3005F1D19 /* DziennikView.swift */,
 				3F75DD112834EF0A005F1D19 /* AppDelegate.swift */,
 				3F75DD132834EF0A005F1D19 /* SceneDelegate.swift */,
 				3F75DD182834EF0A005F1D19 /* ContentView.swift */,
-				3F75DD312834F620005F1D19 /* NowyDziennikView.swift */,
+				71AAEBEE2841868900D5FE61 /* DefaultView.swift */,
+				71B46F4728415455004EF823 /* AddPrzedmiotView.swift */,
+				71A8F9EB284142BB00B99003 /* ManagePrzedmiotView.swift */,
+				71B46F4B28415999004EF823 /* AddOcenaView.swift */,
 				3F75DD1A2834EF0F005F1D19 /* Assets.xcassets */,
 				3F75DD1F2834EF0F005F1D19 /* LaunchScreen.storyboard */,
 				3F75DD222834EF10005F1D19 /* Info.plist */,
@@ -180,14 +186,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F75DD122834EF0A005F1D19 /* AppDelegate.swift in Sources */,
+				71B46F4C28415999004EF823 /* AddOcenaView.swift in Sources */,
+				71B46F4828415455004EF823 /* AddPrzedmiotView.swift in Sources */,
 				3FB124F5283E247C00A1783A /* Przedmiot+CoreDataClass.swift in Sources */,
 				3FB124F6283E247C00A1783A /* Przedmiot+CoreDataProperties.swift in Sources */,
 				3F75DD142834EF0A005F1D19 /* SceneDelegate.swift in Sources */,
+				71A8F9EC284142BB00B99003 /* ManagePrzedmiotView.swift in Sources */,
 				3FB124F4283E247C00A1783A /* Ocena+CoreDataProperties.swift in Sources */,
+				71AAEBEF2841868900D5FE61 /* DefaultView.swift in Sources */,
 				3F75DD192834EF0A005F1D19 /* ContentView.swift in Sources */,
-				3F75DD302834F2B3005F1D19 /* DziennikView.swift in Sources */,
 				3F75DD172834EF0A005F1D19 /* Projekt.xcdatamodeld in Sources */,
-				3F75DD322834F620005F1D19 /* NowyDziennikView.swift in Sources */,
 				3FB124F3283E247C00A1783A /* Ocena+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
