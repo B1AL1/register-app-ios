@@ -1,15 +1,14 @@
 //
-//  AddPrzedmiotView.swift
+//  EditPrzedmiotView.swift
 //  Projekt
 //
-//  Created by Konrad on 27/05/2022.
+//  Created by Konrad on 28/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 
 import SwiftUI
-import CoreData
 
-struct AddPrzedmiotView: View {
+struct EditPrzedmiotView: View {
     
     @Environment(\.managedObjectContext) private var dbContext
     
@@ -20,14 +19,16 @@ struct AddPrzedmiotView: View {
     
     @State private var showingAlert = false
     
+    var przedmiot: Przedmiot
+    
     var body: some View {
         VStack
         {
-            Text("Dodawanie przedmiotu")
+            Text("Edytowanie przedmiotu")
             Spacer()
             TextField("Podaj nazwę przedmiotu:", text: $nazwa).padding().multilineTextAlignment(.center)
-            Button("Dodaj przedmiot") {
-                addPrzedmiot()
+            Button("Edytuj przedmiot") {
+                editPrzedmiot()
             }
             .alert(isPresented: $showingAlert)
             {
@@ -37,7 +38,7 @@ struct AddPrzedmiotView: View {
         }.padding()
     }
     
-    private func addPrzedmiot() {
+    private func editPrzedmiot() {
         if(nazwa == "")
         {
             showingAlert = true
@@ -52,8 +53,6 @@ struct AddPrzedmiotView: View {
         }
         if(!showingAlert)
         {
-            let przedmiot = Przedmiot(context: dbContext)
-            przedmiot.id_przedmiot = UUID().uuidString
             przedmiot.nazwa = nazwa
             
             do {
@@ -66,8 +65,8 @@ struct AddPrzedmiotView: View {
     }
 }
 
-struct AddPrzedmiotView_Previews: PreviewProvider {
+struct EditPrzedmiotView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPrzedmiotView()
+        EditPrzedmiotView(przedmiot: Przedmiot.init())
     }
 }

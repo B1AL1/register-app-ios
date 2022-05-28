@@ -29,14 +29,17 @@ struct ManagePrzedmiotView: View {
             List {
                 if(przedmiot.ocenaArray.isEmpty)
                 {
-                    Text("Nie dodano jeszcze zadnej oceny!")
+                    Text("Nie dodano jeszcze żadnej oceny!")
                 }
                 else
                 {
                     ForEach(przedmiot.ocenaArray) { ocenaItem in
                         HStack
                         {
-                            Text("Ocena: \n\(Int(ocenaItem.wartosc))")
+                            Text("Ocena: \n\(Int(ocenaItem.wartosc))").foregroundColor((ocenaItem.kategoria=="Sprawdzian") ? .red :
+                                                                                        (ocenaItem.kategoria=="Kartkówka") ? .blue :
+                                                                                        (ocenaItem.kategoria=="Aktywność") ? .green :
+                                                                                        (ocenaItem.kategoria=="Odpowiedź") ? .purple : .black)
                             Divider()
                             Text("Waga: \n\(ocenaItem.waga, specifier: "%.2f")")
                             Divider()
@@ -49,7 +52,7 @@ struct ManagePrzedmiotView: View {
                 {
                     showSheet.toggle()
                 }, label: {
-                    Text("Dodaj ocene")
+                    Text("Dodaj ocenę")
                     Image(systemName: "plus")
                 }
             )

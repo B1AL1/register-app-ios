@@ -1,15 +1,14 @@
 //
-//  AddOcenaView.swift
+//  EditOcenaView.swift
 //  Projekt
 //
-//  Created by Konrad on 27/05/2022.
+//  Created by Konrad on 28/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 
 import SwiftUI
-import CoreData
 
-struct AddOcenaView: View {
+struct EditOcenaView: View {
     
     @Environment(\.managedObjectContext) private var dbContext
     
@@ -20,6 +19,8 @@ struct AddOcenaView: View {
     private var oceny: FetchedResults<Ocena>
     
     var przedmiot: Przedmiot
+    
+    var ocenaItem: Ocena
     
     var wartosci = [1.0, 2.0, 3.0, 4.0, 5.0]
     var kategorie = ["Sprawdzian", "Kartkówka", "Odpowiedź", "Aktywność", "Inne"]
@@ -33,7 +34,7 @@ struct AddOcenaView: View {
     var body: some View {
         VStack
         {
-            Text("Dodawanie oceny")
+            Text("Edytowanie oceny")
             Spacer()
             VStack
             {
@@ -63,20 +64,19 @@ struct AddOcenaView: View {
                     }
                 }.pickerStyle(WheelPickerStyle())
                 
-                Button("Dodaj ocenę") {
-                    addOcena()
+                Button("Edytuj ocenę") {
+                    editOcena()
                 }
             }
         }.padding()
     }
     
-    private func addOcena() {
-        let ocena = Ocena(context: dbContext)
-        ocena.id_ocena = UUID().uuidString
-        ocena.wartosc = wartosc
-        ocena.waga = waga
-        ocena.kategoria = kategoria
-        przedmiot.addToOcena(ocena)
+    private func editOcena() {
+        przedmiot.removeFromOcena(ocenaItem)
+        ocenaItem.wartosc = wartosc
+        ocenaItem.waga = waga
+        ocenaItem.kategoria = kategoria
+        przedmiot.addToOcena(ocenaItem)
         
         do {
             try dbContext.save()
@@ -87,8 +87,8 @@ struct AddOcenaView: View {
     }
 }
 
-struct AddOcenaView_Previews: PreviewProvider {
+struct EditOcenaView_Previews: PreviewProvider {
     static var previews: some View {
-        AddOcenaView(przedmiot: Przedmiot.init())
+        EditOcenaView(przedmiot: Przedmiot.init(), ocenaItem: Ocena.init())
     }
 }

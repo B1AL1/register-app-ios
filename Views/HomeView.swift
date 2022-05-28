@@ -21,17 +21,28 @@ struct HomeView: View {
     
     @State private var showSheet: Bool = false
     
+    @State private var showSheetEdit: Bool = false
+    
+    @GestureState var isLongPress = false
+    
     var body: some View {
+        
+        let longPress = LongPressGesture().onEnded
+        { finished in
+            showSheetEdit.toggle()
+        }
+        
         NavigationView{
             VStack {
+                Image("iconDziennik")
                 Text("Dzienniczek ucznia")
                 List {
                     if(przedmioty.isEmpty)
                     {
                         VStack
                         {
-                            Text("Nie dodano jeszcze zadnego przedmiotu!")
-                        }
+                            Text("Nie dodano jeszcze żadnego przedmiotu!")
+                        }.padding()
                     }
                     else
                     {
@@ -40,7 +51,10 @@ struct HomeView: View {
                             {
                                 VStack
                                 {
-                                    Text(przedmiot.nazwa!)
+                                    Text(przedmiot.nazwa!).gesture(longPress).sheet(isPresented: $showSheetEdit)
+                                    {
+                                        EditPrzedmiotView(przedmiot: przedmiot)
+                                    }
                                     if(!przedmiot.ocenaArray.isEmpty)
                                     {
                                         Divider()
@@ -49,7 +63,10 @@ struct HomeView: View {
                                             HStack
                                             {
                                                 ForEach(przedmiot.ocenaArray) { ocenaItem in
-                                                    Text("\(Int(ocenaItem.wartosc))")
+                                                    Text("\(Int(ocenaItem.wartosc))").foregroundColor((ocenaItem.kategoria=="Sprawdzian") ? .red :
+                                                                                                        (ocenaItem.kategoria=="Kartkówka") ? .blue :
+                                                                                                        (ocenaItem.kategoria=="Aktywność") ? .green :
+                                                                                                        (ocenaItem.kategoria=="Odpowiedź") ? .purple : .black)
                                                 }
                                             }
                                         }
@@ -59,7 +76,7 @@ struct HomeView: View {
                                         Group
                                         {
                                             Divider()
-                                            Text("Kliknij aby dodac oceny").font(.system(size: 8))
+                                            Text("Kliknij aby dodać oceny").font(.system(size: 8))
                                             Spacer()
                                         }
                                     }
