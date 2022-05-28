@@ -23,6 +23,8 @@ struct AddPrzedmiotView: View {
     var body: some View {
         VStack
         {
+            Text("Dodawanie przedmiotu")
+            Spacer()
             TextField("Podaj nazwe przedmiotu:", text: $nazwa).padding().multilineTextAlignment(.center)
             Button("Dodaj Przedmiot") {
                 czyPrzedmiotDodany()
@@ -31,7 +33,8 @@ struct AddPrzedmiotView: View {
             {
                 Alert(title: Text("Blad"), message: Text("Przedmot juz istnieje"), dismissButton: .default(Text("OK")))
             }
-        }
+            Spacer()
+        }.padding()
     }
     
     private func czyPrzedmiotDodany() {

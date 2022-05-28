@@ -27,18 +27,21 @@ struct ManagePrzedmiotView: View {
         VStack {
             Text(przedmiot.nazwa!)
             List {
-                if(Array((przedmiot.ocena as? Set<Ocena>)!).isEmpty)
+                if(przedmiot.ocenaArray.isEmpty)
                 {
                     Text("Nie dodano jeszcze zadnej oceny!")
                 }
                 else
                 {
-                    ForEach(Array((przedmiot.ocena as? Set<Ocena>)!)) { ocenaItem in
-                        VStack(alignment: .leading) {
-                            Text("Ocena: \(ocenaItem.wartosc, specifier: "%.2f")")
-                            Text("Waga: \(ocenaItem.waga, specifier: "%.2f")")
-                            Text("Kategoria: \(ocenaItem.kategoria ?? "")")
-                        }
+                    ForEach(przedmiot.ocenaArray) { ocenaItem in
+                        HStack
+                        {
+                            Text("Ocena: \n\(Int(ocenaItem.wartosc))")
+                            Divider()
+                            Text("Waga: \n\(ocenaItem.waga, specifier: "%.2f")")
+                            Divider()
+                            Text("Kategoria: \n\(ocenaItem.kategoria!)")
+                        }.padding().multilineTextAlignment(.center)
                     }.onDelete(perform: deleteOcena)
                 }
             }
@@ -59,7 +62,7 @@ struct ManagePrzedmiotView: View {
     
     private func deleteOcena(offsets: IndexSet) {
         withAnimation {
-            offsets.map { oceny[$0] }.forEach(dbContext.delete)
+            offsets.map { przedmiot.ocenaArray[$0] }.forEach(dbContext.delete)
             do {
                 try dbContext.save()
             } catch {

@@ -20,6 +20,15 @@ extension Przedmiot {
     @NSManaged public var id_przedmiot: String?
     @NSManaged public var nazwa: String?
     @NSManaged public var ocena: NSSet?
+    
+    public var ocenaArray: [Ocena] {
+        let set = ocena as? Set<Ocena> ?? []
+        
+        return set.sorted
+        {
+            $0.id_ocena! < $1.id_ocena!
+        }
+    }
 
 }
 

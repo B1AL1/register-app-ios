@@ -28,7 +28,10 @@ struct HomeView: View {
                 List {
                     if(przedmioty.isEmpty)
                     {
-                        Text("Nie dodano jeszcze zadnego przedmiotu!")
+                        VStack
+                        {
+                            Text("Nie dodano jeszcze zadnego przedmiotu!")
+                        }
                     }
                     else
                     {
@@ -38,17 +41,26 @@ struct HomeView: View {
                                 VStack
                                 {
                                     Text(przedmiot.nazwa!)
-                                    Spacer()
-                                    Group {
-                                        VStack(alignment: .center)
+                                    if(!przedmiot.ocenaArray.isEmpty)
+                                    {
+                                        Divider()
+                                        Group
                                         {
-                                            ForEach(Array((przedmiot.ocena as? Set<Ocena>)!)) { ocenaItem in
-                                                HStack {
-                                                    Text("Ocena: \(ocenaItem.wartosc, specifier: "%.2f")")
-                                                    Text("Waga: \(ocenaItem.waga, specifier: "%.2f")")
-                                                    Text("Kategoria: \(ocenaItem.kategoria ?? "")")
-                                                }.padding()
+                                            HStack
+                                            {
+                                                ForEach(przedmiot.ocenaArray) { ocenaItem in
+                                                    Text("\(Int(ocenaItem.wartosc))")
+                                                }
                                             }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Group
+                                        {
+                                            Divider()
+                                            Text("Kliknij aby dodac oceny").font(.system(size: 8))
+                                            Spacer()
                                         }
                                     }
                                 }
@@ -66,7 +78,7 @@ struct HomeView: View {
                 )
                 .sheet(isPresented: $showSheet)
                 {
-                        AddPrzedmiotView()
+                    AddPrzedmiotView()
                 }
             }
         }
