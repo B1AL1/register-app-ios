@@ -32,7 +32,7 @@ struct EditPrzedmiotView: View {
             }
             .alert(isPresented: $showingAlert)
             {
-                Alert(title: Text("Blad"), message: Text("Przedmot już istnieje lub nie podano nazwy"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Błąd"), message: Text("Przedmot już istnieje lub nie podano nazwy"), dismissButton: .default(Text("OK")))
             }
             Spacer()
         }.padding()
