@@ -63,7 +63,10 @@
 		3F75DD052834EF0A005F1D19 = {
 			isa = PBXGroup;
 			children = (
-				71F9C8062843E91E00BC465E /* CoreData */,
+				71F9C7D82843E60D00BC465E /* Ocena+CoreDataClass.swift */,
+				71F9C7D92843E60D00BC465E /* Ocena+CoreDataProperties.swift */,
+				71F9C7DA2843E60D00BC465E /* Przedmiot+CoreDataClass.swift */,
+				71F9C7DB2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift */,
 				71AAEBF12841903700D5FE61 /* Views */,
 				3F75DD102834EF0A005F1D19 /* register-app-ios */,
 				3F75DD0F2834EF0A005F1D19 /* Products */,
@@ -120,17 +123,6 @@
 				713C1E2B2842A28D00178944 /* EditPrzedmiotView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		71F9C8062843E91E00BC465E /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				71F9C7D82843E60D00BC465E /* Ocena+CoreDataClass.swift */,
-				71F9C7D92843E60D00BC465E /* Ocena+CoreDataProperties.swift */,
-				71F9C7DA2843E60D00BC465E /* Przedmiot+CoreDataClass.swift */,
-				71F9C7DB2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
