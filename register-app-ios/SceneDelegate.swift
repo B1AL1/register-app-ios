@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Projekt
+//  register-app-ios
 //
-//  Created by student on 18/05/2022.
+//  Created by Konrad on 18/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 

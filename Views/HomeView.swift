@@ -1,6 +1,6 @@
 //
 //  DefaultView.swift
-//  Projekt
+//  register-app-ios
 //
 //  Created by Konrad on 27/05/2022.
 //  Copyright © 2022 PL. All rights reserved.

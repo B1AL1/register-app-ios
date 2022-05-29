@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Projekt
+//  register-app-ios
 //
-//  Created by student on 18/05/2022.
+//  Created by Konrad on 18/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Projekt")
+        let container = NSPersistentContainer(name: "register-app-ios")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

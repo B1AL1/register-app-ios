@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		3F75DD122834EF0A005F1D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD112834EF0A005F1D19 /* AppDelegate.swift */; };
 		3F75DD142834EF0A005F1D19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD132834EF0A005F1D19 /* SceneDelegate.swift */; };
-		3F75DD172834EF0A005F1D19 /* Projekt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD152834EF0A005F1D19 /* Projekt.xcdatamodeld */; };
+		3F75DD172834EF0A005F1D19 /* register-app-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD152834EF0A005F1D19 /* register-app-ios.xcdatamodeld */; };
 		3F75DD192834EF0A005F1D19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75DD182834EF0A005F1D19 /* ContentView.swift */; };
 		3F75DD1B2834EF0F005F1D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F75DD1A2834EF0F005F1D19 /* Assets.xcassets */; };
 		3F75DD1E2834EF0F005F1D19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F75DD1D2834EF0F005F1D19 /* Preview Assets.xcassets */; };
 		3F75DD212834EF0F005F1D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75DD1F2834EF0F005F1D19 /* LaunchScreen.storyboard */; };
 		3F75DD2A2834F1F9005F1D19 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F75DD292834F1F9005F1D19 /* CoreData.framework */; };
-		3FB124F3283E247C00A1783A /* Ocena+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124EF283E247C00A1783A /* Ocena+CoreDataClass.swift */; };
-		3FB124F4283E247C00A1783A /* Ocena+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F0283E247C00A1783A /* Ocena+CoreDataProperties.swift */; };
-		3FB124F5283E247C00A1783A /* Przedmiot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F1283E247C00A1783A /* Przedmiot+CoreDataClass.swift */; };
-		3FB124F6283E247C00A1783A /* Przedmiot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB124F2283E247C00A1783A /* Przedmiot+CoreDataProperties.swift */; };
 		713C1E2C2842A28D00178944 /* EditPrzedmiotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C1E2B2842A28D00178944 /* EditPrzedmiotView.swift */; };
 		71A8F9EC284142BB00B99003 /* ManagePrzedmiotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8F9EB284142BB00B99003 /* ManagePrzedmiotView.swift */; };
 		71AAEBEF2841868900D5FE61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AAEBEE2841868900D5FE61 /* HomeView.swift */; };
 		71B46F4828415455004EF823 /* AddPrzedmiotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B46F4728415455004EF823 /* AddPrzedmiotView.swift */; };
 		71B46F4C28415999004EF823 /* AddOcenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B46F4B28415999004EF823 /* AddOcenaView.swift */; };
+		71F9C7DC2843E60D00BC465E /* Ocena+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9C7D82843E60D00BC465E /* Ocena+CoreDataClass.swift */; };
+		71F9C7DD2843E60D00BC465E /* Ocena+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9C7D92843E60D00BC465E /* Ocena+CoreDataProperties.swift */; };
+		71F9C7DE2843E60D00BC465E /* Przedmiot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9C7DA2843E60D00BC465E /* Przedmiot+CoreDataClass.swift */; };
+		71F9C7DF2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9C7DB2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F75DD0E2834EF0A005F1D19 /* Projekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F75DD0E2834EF0A005F1D19 /* register-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "register-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F75DD112834EF0A005F1D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F75DD132834EF0A005F1D19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F75DD162834EF0A005F1D19 /* Projekt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Projekt.xcdatamodel; sourceTree = "<group>"; };
@@ -37,15 +37,15 @@
 		3F75DD202834EF0F005F1D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F75DD222834EF10005F1D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F75DD292834F1F9005F1D19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3FB124EF283E247C00A1783A /* Ocena+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3FB124F0283E247C00A1783A /* Ocena+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3FB124F1283E247C00A1783A /* Przedmiot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3FB124F2283E247C00A1783A /* Przedmiot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		713C1E2B2842A28D00178944 /* EditPrzedmiotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPrzedmiotView.swift; sourceTree = "<group>"; };
 		71A8F9EB284142BB00B99003 /* ManagePrzedmiotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePrzedmiotView.swift; sourceTree = "<group>"; };
 		71AAEBEE2841868900D5FE61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		71B46F4728415455004EF823 /* AddPrzedmiotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrzedmiotView.swift; sourceTree = "<group>"; };
 		71B46F4B28415999004EF823 /* AddOcenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOcenaView.swift; sourceTree = "<group>"; };
+		71F9C7D82843E60D00BC465E /* Ocena+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataClass.swift"; sourceTree = "<group>"; };
+		71F9C7D92843E60D00BC465E /* Ocena+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocena+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		71F9C7DA2843E60D00BC465E /* Przedmiot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		71F9C7DB2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Przedmiot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +63,9 @@
 		3F75DD052834EF0A005F1D19 = {
 			isa = PBXGroup;
 			children = (
+				71F9C8062843E91E00BC465E /* CoreData */,
 				71AAEBF12841903700D5FE61 /* Views */,
-				3FB124EF283E247C00A1783A /* Ocena+CoreDataClass.swift */,
-				3FB124F0283E247C00A1783A /* Ocena+CoreDataProperties.swift */,
-				3FB124F1283E247C00A1783A /* Przedmiot+CoreDataClass.swift */,
-				3FB124F2283E247C00A1783A /* Przedmiot+CoreDataProperties.swift */,
-				3F75DD102834EF0A005F1D19 /* Projekt */,
+				3F75DD102834EF0A005F1D19 /* register-app-ios */,
 				3F75DD0F2834EF0A005F1D19 /* Products */,
 				3F75DD282834F1F9005F1D19 /* Frameworks */,
 			);
@@ -77,12 +74,12 @@
 		3F75DD0F2834EF0A005F1D19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F75DD0E2834EF0A005F1D19 /* Projekt.app */,
+				3F75DD0E2834EF0A005F1D19 /* register-app-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F75DD102834EF0A005F1D19 /* Projekt */ = {
+		3F75DD102834EF0A005F1D19 /* register-app-ios */ = {
 			isa = PBXGroup;
 			children = (
 				3F75DD112834EF0A005F1D19 /* AppDelegate.swift */,
@@ -91,10 +88,10 @@
 				3F75DD1A2834EF0F005F1D19 /* Assets.xcassets */,
 				3F75DD1F2834EF0F005F1D19 /* LaunchScreen.storyboard */,
 				3F75DD222834EF10005F1D19 /* Info.plist */,
-				3F75DD152834EF0A005F1D19 /* Projekt.xcdatamodeld */,
+				3F75DD152834EF0A005F1D19 /* register-app-ios.xcdatamodeld */,
 				3F75DD1C2834EF0F005F1D19 /* Preview Content */,
 			);
-			path = Projekt;
+			path = "register-app-ios";
 			sourceTree = "<group>";
 		};
 		3F75DD1C2834EF0F005F1D19 /* Preview Content */ = {
@@ -125,12 +122,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		71F9C8062843E91E00BC465E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				71F9C7D82843E60D00BC465E /* Ocena+CoreDataClass.swift */,
+				71F9C7D92843E60D00BC465E /* Ocena+CoreDataProperties.swift */,
+				71F9C7DA2843E60D00BC465E /* Przedmiot+CoreDataClass.swift */,
+				71F9C7DB2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F75DD0D2834EF0A005F1D19 /* Projekt */ = {
+		3F75DD0D2834EF0A005F1D19 /* register-app-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F75DD252834EF10005F1D19 /* Build configuration list for PBXNativeTarget "Projekt" */;
+			buildConfigurationList = 3F75DD252834EF10005F1D19 /* Build configuration list for PBXNativeTarget "register-app-ios" */;
 			buildPhases = (
 				3F75DD0A2834EF0A005F1D19 /* Sources */,
 				3F75DD0B2834EF0A005F1D19 /* Frameworks */,
@@ -140,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = Projekt;
+			name = "register-app-ios";
 			productName = Projekt;
-			productReference = 3F75DD0E2834EF0A005F1D19 /* Projekt.app */;
+			productReference = 3F75DD0E2834EF0A005F1D19 /* register-app-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F75DD092834EF0A005F1D19 /* Build configuration list for PBXProject "Projekt" */;
+			buildConfigurationList = 3F75DD092834EF0A005F1D19 /* Build configuration list for PBXProject "register-app-ios" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +181,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F75DD0D2834EF0A005F1D19 /* Projekt */,
+				3F75DD0D2834EF0A005F1D19 /* register-app-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -198,16 +206,16 @@
 			files = (
 				3F75DD122834EF0A005F1D19 /* AppDelegate.swift in Sources */,
 				71B46F4C28415999004EF823 /* AddOcenaView.swift in Sources */,
+				71F9C7DD2843E60D00BC465E /* Ocena+CoreDataProperties.swift in Sources */,
 				71B46F4828415455004EF823 /* AddPrzedmiotView.swift in Sources */,
-				3FB124F5283E247C00A1783A /* Przedmiot+CoreDataClass.swift in Sources */,
-				3FB124F6283E247C00A1783A /* Przedmiot+CoreDataProperties.swift in Sources */,
 				3F75DD142834EF0A005F1D19 /* SceneDelegate.swift in Sources */,
+				71F9C7DF2843E60D00BC465E /* Przedmiot+CoreDataProperties.swift in Sources */,
+				71F9C7DC2843E60D00BC465E /* Ocena+CoreDataClass.swift in Sources */,
 				71A8F9EC284142BB00B99003 /* ManagePrzedmiotView.swift in Sources */,
-				3FB124F4283E247C00A1783A /* Ocena+CoreDataProperties.swift in Sources */,
 				71AAEBEF2841868900D5FE61 /* HomeView.swift in Sources */,
 				3F75DD192834EF0A005F1D19 /* ContentView.swift in Sources */,
-				3F75DD172834EF0A005F1D19 /* Projekt.xcdatamodeld in Sources */,
-				3FB124F3283E247C00A1783A /* Ocena+CoreDataClass.swift in Sources */,
+				3F75DD172834EF0A005F1D19 /* register-app-ios.xcdatamodeld in Sources */,
+				71F9C7DE2843E60D00BC465E /* Przedmiot+CoreDataClass.swift in Sources */,
 				713C1E2C2842A28D00178944 /* EditPrzedmiotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,14 +353,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Projekt/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"register-app-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Projekt/Info.plist;
+				INFOPLIST_FILE = "register-app-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PL.Projekt;
+				PRODUCT_BUNDLE_IDENTIFIER = "PL.register-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,14 +372,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Projekt/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"register-app-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Projekt/Info.plist;
+				INFOPLIST_FILE = "register-app-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PL.Projekt;
+				PRODUCT_BUNDLE_IDENTIFIER = "PL.register-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F75DD092834EF0A005F1D19 /* Build configuration list for PBXProject "Projekt" */ = {
+		3F75DD092834EF0A005F1D19 /* Build configuration list for PBXProject "register-app-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F75DD232834EF10005F1D19 /* Debug */,
@@ -390,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F75DD252834EF10005F1D19 /* Build configuration list for PBXNativeTarget "Projekt" */ = {
+		3F75DD252834EF10005F1D19 /* Build configuration list for PBXNativeTarget "register-app-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F75DD262834EF10005F1D19 /* Debug */,
@@ -402,13 +410,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3F75DD152834EF0A005F1D19 /* Projekt.xcdatamodeld */ = {
+		3F75DD152834EF0A005F1D19 /* register-app-ios.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				3F75DD162834EF0A005F1D19 /* Projekt.xcdatamodel */,
 			);
 			currentVersion = 3F75DD162834EF0A005F1D19 /* Projekt.xcdatamodel */;
-			path = Projekt.xcdatamodeld;
+			path = "register-app-ios.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

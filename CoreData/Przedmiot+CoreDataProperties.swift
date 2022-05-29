@@ -1,8 +1,8 @@
 //
 //  Przedmiot+CoreDataProperties.swift
-//  Projekt
+//  register-app-ios
 //
-//  Created by Konrad on 27/05/2022.
+//  Created by Konrad on 29/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 //
@@ -22,14 +22,13 @@ extension Przedmiot {
     @NSManaged public var ocena: NSSet?
     
     public var ocenaArray: [Ocena] {
-        let set = ocena as? Set<Ocena> ?? []
-        
-        return set.sorted
-        {
-            $0.id_ocena! < $1.id_ocena!
+            let set = ocena as? Set<Ocena> ?? []
+            
+            return set.sorted
+            {
+                $0.id_ocena! < $1.id_ocena!
+            }
         }
-    }
-
 }
 
 // MARK: Generated accessors for ocena

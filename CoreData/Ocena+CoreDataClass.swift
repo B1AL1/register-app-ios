@@ -1,8 +1,8 @@
 //
 //  Ocena+CoreDataClass.swift
-//  Projekt
+//  register-app-ios
 //
-//  Created by student on 25/05/2022.
+//  Created by Konrad on 29/05/2022.
 //  Copyright © 2022 PL. All rights reserved.
 //
 //
