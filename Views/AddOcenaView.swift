@@ -21,7 +21,7 @@ struct AddOcenaView: View {
     
     var przedmiot: Przedmiot
     
-    var wartosci = [1.0, 2.0, 3.0, 4.0, 5.0]
+    var wartosci = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
     var kategorie = ["Sprawdzian", "Kartkówka", "Odpowiedź", "Aktywność", "Inne"]
     
     @State private var kategoria: String = "Aktywność"
