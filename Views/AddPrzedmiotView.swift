@@ -17,7 +17,7 @@ struct AddPrzedmiotView: View {
     private var przedmioty: FetchedResults<Przedmiot>
     
     @State private var nazwa: String = ""
-    
+    @State private var komunikat: String = ""
     @State private var showingAlert = false
     
     var body: some View {
@@ -34,18 +34,21 @@ struct AddPrzedmiotView: View {
                 Alert(title: Text("Błąd"), message: Text("Przedmot już istnieje lub nie podano nazwy"), dismissButton: .default(Text("OK")))
             }
             Spacer()
+	    Text(komunikat)
         }.padding()
     }
     
     private func addPrzedmiot() {
         if(nazwa == "")
         {
+	    komunikat = ""
             showingAlert = true
             return
         }
         przedmioty.forEach { przedmiot in
             if(przedmiot.nazwa == nazwa)
             {
+		komunikat = ""
                 showingAlert = true
                 return
             }
@@ -55,7 +58,7 @@ struct AddPrzedmiotView: View {
             let przedmiot = Przedmiot(context: dbContext)
             przedmiot.id_przedmiot = UUID().uuidString
             przedmiot.nazwa = nazwa
-            
+            komunikat = "Pomyślnie dodano przedmiot: \(nazwa)"
             do {
                 try dbContext.save()
             } catch {

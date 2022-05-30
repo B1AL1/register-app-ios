@@ -27,7 +27,7 @@ struct AddOcenaView: View {
     @State private var kategoria: String = "Aktywność"
     @State private var waga: Double = 1.0
     @State private var wartosc: Double = 1.0
-    
+    @State private var komunikatOceny: String = ""
     @State private var isEditing = false
     
     var body: some View {
@@ -67,6 +67,7 @@ struct AddOcenaView: View {
                     addOcena()
                 }
             }
+	    Text(komunikatOceny)
         }.padding()
     }
     
@@ -77,7 +78,7 @@ struct AddOcenaView: View {
         ocena.waga = waga
         ocena.kategoria = kategoria
         przedmiot.addToOcena(ocena)
-        
+        komunikatOceny = "Pomyślnie dodano ocene: \(Int(wartosc))"
         do {
             try dbContext.save()
         } catch {
