@@ -29,6 +29,7 @@ struct AddOcenaView: View {
     @State private var wartosc: Double = 1.0
     @State private var komunikatOceny: String = ""
     @State private var isEditing = false
+    @Binding var change: Bool
     
     var body: some View {
         VStack
@@ -65,6 +66,7 @@ struct AddOcenaView: View {
                 
                 Button("Dodaj ocenę") {
                     addOcena()
+                    change.toggle()
                 }
             }
 	    Text(komunikatOceny)
@@ -90,6 +92,6 @@ struct AddOcenaView: View {
 
 struct AddOcenaView_Previews: PreviewProvider {
     static var previews: some View {
-        AddOcenaView(przedmiot: Przedmiot.init())
+        AddOcenaView(przedmiot: Przedmiot.init(), change: .constant(true))
     }
 }

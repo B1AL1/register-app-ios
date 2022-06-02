@@ -58,7 +58,7 @@ struct ManagePrzedmiotView: View {
             )
             .sheet(isPresented: $showSheet)
             {
-                    AddOcenaView(przedmiot: przedmiot)
+                    AddOcenaView(przedmiot: przedmiot, change: $showSheet)
             }
         }
     }
